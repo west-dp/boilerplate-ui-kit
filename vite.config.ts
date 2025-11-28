@@ -25,18 +25,19 @@ function findComponents() {
   return components.sort()
 }
 
-// Generate entry points dynamically
-function generateEntries() {
-  const entries: Record<string, string> = {
-    index: resolve(__dirname, 'src/index.ts'),
-    'components/index': resolve(__dirname, 'src/components/index.ts'),
-    'plugins/vuetify': resolve(__dirname, 'src/plugins/vuetify.ts'),
-    'constants/color': resolve(__dirname, 'src/constants/color.ts'),
-    'styles/index': resolve(__dirname, 'src/styles/index.ts')
+  // Generate entry points dynamically
+  function generateEntries() {
+    const entries: Record<string, string> = {
+      index: resolve(__dirname, 'src/index.ts'),
+      'components/index': resolve(__dirname, 'src/components/index.ts'),
+      'plugins/vuetify': resolve(__dirname, 'src/plugins/vuetify.ts'),
+      'plugins/event-bus': resolve(__dirname, 'src/plugins/event-bus.ts'),
+      'constants/color': resolve(__dirname, 'src/constants/color.ts'),
+      'styles/index': resolve(__dirname, 'src/styles/index.ts')
+    }
+
+    return entries
   }
-  
-  return entries
-}
 
 export default defineConfig({
   plugins: [
