@@ -1,0 +1,16 @@
+node_modules
+dist
+.storybook
+stories
+*.log
+.DS_Store
+.vscode
+.idea
+*.local
+storybook-static
+src/**/*.stories.ts
+src/**/*.test.ts
+.git
+.gitignore
+README.md
+

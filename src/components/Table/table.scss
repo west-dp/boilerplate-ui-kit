@@ -1,0 +1,166 @@
+.table {
+  margin-top: 32px;
+  border-top: 1px solid rgba(var(--ui-primary, 25, 118, 210), 0.3);
+
+  &-container {
+    position: relative;
+  }
+
+  &-s-column {
+    min-width: 50px;
+  }
+
+  &-m-column {
+    min-width: 100px;
+  }
+
+  &-l-column {
+    min-width: 150px;
+  }
+
+  &-xl-column {
+    min-width: 200px;
+  }
+
+  &-xxl-column {
+    min-width: 250px;
+  }
+
+  &-max-column {
+    word-break: break-word;
+    max-width: 250px;
+  }
+
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__actions {
+      min-width: 280px;
+    }
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background-color: var(--ui-table-row, #f5f5f5);
+    }
+
+    tr:nth-child(even) {
+      background-color: white;
+    }
+
+    tr {
+      &:hover {
+        background-color: var(--ui-table-row-hover, #e3f2fd);
+      }
+
+      &.active {
+        background-color: var(--ui-table-row-hover, #e3f2fd);
+      }
+    }
+  }
+
+  &-menu {
+    background-color: white;
+    height: 100%;
+    padding: 56px 24px 0;
+    overflow-y: auto;
+
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-content {
+      padding-top: 32px;
+      padding-bottom: 40px;
+
+      li {
+        list-style: none;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-label {
+      margin-bottom: 8px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      list-style: none;
+      transition: 0.3s ease;
+
+      &__control {
+        flex-grow: 1;
+      }
+
+      &__icon {
+        cursor: grab;
+      }
+
+      &__drag {
+        cursor: grab;
+      }
+    }
+
+    &-action {
+      width: 100%;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-actions {
+      position: sticky;
+      background-color: white;
+      padding: 14px 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &-overlay {
+    :deep(.v-overlay__content) {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 400px;
+      height: 100%;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  :deep(.v-data-table-header__content span) {
+    font-weight: 700;
+  }
+
+  &-header {
+    &-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+  }
+}
+

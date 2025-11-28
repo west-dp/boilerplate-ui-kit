@@ -1,0 +1,29 @@
+.badge {
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  word-break: break-word;
+  min-width: 100px;
+
+  &.success { 
+    background-color: var(--ui-success, #4CAF50); 
+    color: var(--ui-white, #ffffff); 
+  }
+  &.error { 
+    background-color: var(--ui-error, #FF5252); 
+    color: var(--ui-white, #ffffff); 
+  }
+  &.info { 
+    background-color: var(--ui-info-bg, #E3F2FD); 
+    color: var(--ui-blue-color, #1976D2); 
+  }
+  &.default { 
+    background-color: var(--ui-default-bg, #F5F5F5); 
+    color: var(--ui-default-text, #424242); 
+  }
+}
+

@@ -1,0 +1,102 @@
+{
+  "name": "boilerplate-ui-kit",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Vuetify 3-based UI component library",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./styles": {
+      "import": "./dist/styles/index.js",
+      "types": "./dist/styles/index.d.ts"
+    },
+    "./styles/variables.scss": "./src/styles/variables.scss",
+    "./styles/kit-reset.scss": "./src/styles/kit-reset.scss",
+    "./styles/variables": "./dist/styles/variables.css",
+    "./styles/kit-reset": "./dist/styles/kit-reset.css",
+    "./plugin": {
+      "import": "./dist/plugins/vuetify.js",
+      "types": "./dist/plugins/vuetify.d.ts"
+    },
+    "./constants": {
+      "import": "./dist/constants/color.js",
+      "types": "./dist/constants/color.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src/styles"
+  ],
+  "scripts": {
+    "prebuild": "node scripts/generate-exports.js",
+    "build": "vite build && node scripts/cleanup-vue2.js",
+    "generate-exports": "node scripts/generate-exports.js",
+    "gen": "plop",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "keywords": [
+    "vue",
+    "vuetify",
+    "ui-kit",
+    "components"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/west-dp/boilerplate-ui-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/west-dp/boilerplate-ui-kit/issues"
+  },
+  "homepage": "https://github.com/west-dp/boilerplate-ui-kit#readme",
+  "peerDependencies": {
+    "vue": "^3.3.0",
+    "vuetify": "^3.5.0",
+    "vue-router": "^4.5.0",
+    "mitt": "^3.0.0"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.4.47",
+    "@storybook/addon-essentials": "^7.6.0",
+    "@storybook/addon-interactions": "^7.6.0",
+    "@storybook/addon-links": "^7.6.0",
+    "@storybook/blocks": "^7.6.0",
+    "@storybook/vue3": "^7.6.0",
+    "@storybook/vue3-vite": "^7.6.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/test-utils": "^2.4.0",
+    "plop": "^4.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.0",
+    "storybook": "^7.6.0",
+    "typescript": "^5.3.0",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.7.0",
+    "vue": "^3.3.0",
+    "vue-tsc": "^1.8.0",
+    "vuetify": "^3.5.0"
+  },
+  "dependencies": {
+    "mitt": "^3.0.1"
+  }
+}

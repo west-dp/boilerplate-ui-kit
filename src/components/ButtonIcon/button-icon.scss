@@ -1,0 +1,17 @@
+.button-icon {
+  cursor: pointer;
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.button-icon-icon {
+  margin-right: 4px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
