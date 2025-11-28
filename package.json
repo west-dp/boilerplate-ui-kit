@@ -46,6 +46,7 @@
   "scripts": {
     "prebuild": "node scripts/generate-exports.js",
     "build": "vite build && node scripts/cleanup-vue2.js",
+    "postinstall": "yarn build",
     "generate-exports": "node scripts/generate-exports.js",
     "gen": "plop",
     "storybook": "storybook dev -p 6006",
